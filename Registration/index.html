@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>FashionFind</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form onsubmit="return false;">
+                <h1>Создать аккаунт</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <span>или используйте почту для регистрации</span>
+                <input type="text" placeholder="Name" id="name" autocomplete="name">
+                <input type="email" placeholder="Email" id="email" autocomplete="email">
+                <input type="password" placeholder="Password" id="password" autocomplete="new-password">
+                <button id="sign_in" onclick="register(event)">Зарегистрироваться</button>
+                <div id="message"></div>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Войти</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <span>или используйте почту и пароль</span>
+                <input type="email" placeholder="Email" id="email1" autocomplete="email">
+                <input type="password" placeholder="Password" id="password1" autocomplete="current-password">
+                <button id="enter" onclick="login(event)">Войти</button>
+                <div id="message1"></div>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel
+                toggle-left">
+                <h1>С возвращением!</h1>
+                <p>Введите свои личные данные, чтобы использовать все возможности сайта</p>
+                <button class="hidden" id="login">Войти</button>
+                </div>
+                <div class="toggle-panel
+                toggle-right">
+                <h1>Привет, мой друг</h1>
+                <p>Зарегистрируйтесь, указав свои личные данные, чтобы использовать все функции сайта.</p>
+                <button class="hidden" id="register">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</body>
+</html>
